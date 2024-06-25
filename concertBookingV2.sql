@@ -1,10 +1,7 @@
--- Buat database
 CREATE DATABASE booking_concert;
 
--- Gunakan database yang baru dibuat
 USE booking_concert;
 
--- Buat tabel Pengguna
 CREATE TABLE Pengguna (
     id_pengguna INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(255) NOT NULL,
@@ -12,7 +9,6 @@ CREATE TABLE Pengguna (
     password VARCHAR(255) NOT NULL
 );
 
--- Buat tabel Acara
 CREATE TABLE Acara (
     id_acara INT AUTO_INCREMENT PRIMARY KEY,
     nama_acara VARCHAR(255) NOT NULL,
@@ -21,7 +17,6 @@ CREATE TABLE Acara (
     deskripsi TEXT
 );
 
--- Buat tabel Tiket
 CREATE TABLE Tiket (
     id_tiket INT AUTO_INCREMENT PRIMARY KEY,
     id_acara INT,
@@ -30,7 +25,6 @@ CREATE TABLE Tiket (
     FOREIGN KEY (id_acara) REFERENCES Acara(id_acara)
 );
 
--- Buat tabel Transaksi
 CREATE TABLE Transaksi (
     id_transaksi INT AUTO_INCREMENT PRIMARY KEY,
     id_tiket INT,
