@@ -1,4 +1,4 @@
-CREATE DATABASE booking_concert;
+CREATE DATABASE pemesanan-tiket;
 
 USE booking_concert;
 
