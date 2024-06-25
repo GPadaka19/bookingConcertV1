@@ -1,6 +1,6 @@
-CREATE DATABASE pemesanan-tiket;
+CREATE DATABASE pemesanan_tiket;
 
-USE pemesanan-tiket;
+USE pemesanan_tiket;
 
 CREATE TABLE Pengguna (
     id_pengguna INT AUTO_INCREMENT PRIMARY KEY,
