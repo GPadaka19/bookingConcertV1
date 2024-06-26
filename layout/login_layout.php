@@ -13,7 +13,7 @@ if (isset($_SESSION['nama'])) {
 <body>
     <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="home.php" class="text-white text-2xl font-bold">Pemesanan tiket</a>
+        <a href="login_index.php" class="text-white text-2xl font-bold">Pemesanan tiket</a>
         <ul class="flex space-x-4">
             <li><a href="profil.php" class="text-white"><?= $_SESSION['nama']; ?></a></li>
             <li><a href="koneksi/logout.php" class="text-white">Logout</a></li>
