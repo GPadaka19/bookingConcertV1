@@ -16,7 +16,7 @@ if (isset($_SESSION['nama'])) {
         <a href="index.php" class="text-white text-2xl font-bold">Pemesanan tiket</a>
         <ul class="flex space-x-4">
             <li><a href="profil.php" class="text-white"><?= $_SESSION['nama']; ?></a></li>
-            <li><a href="../koneksi/logout.php" class="text-white">Logout</a></li>
+            <li><a href="logout.php" class="text-white">Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -25,5 +25,5 @@ if (isset($_SESSION['nama'])) {
 
 <?php
 } else {
-    header("location: login.php");
+    header("location: index.php");
 }
