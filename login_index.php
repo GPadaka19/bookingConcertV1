@@ -13,16 +13,15 @@ $result = mysqli_query($conn, $query);
         <?php
         while ($konser = mysqli_fetch_assoc($result)) {
             ?>
-            <!-- Start of Concert Card -->
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="text-xl font-bold mb-2"><?= $konser['nama']; ?></h3>
-                <p class="text-gray-700 mb-2">Tanggal: <?= date('d F Y', strtotime($konser['tanggal'])); ?></p>
-                <p class="text-gray-700">Lokasi: <?= $konser['lokasi']; ?></p>
-            </div>
-            <!-- End of Concert Card -->
+            <img src="img/<?= $konser['gambar']; ?>" alt="Gambar Konser" class="w-full mb-4" style="height: 300px; object-fit: contain; object-position: center; width: 100%;">
+            <h3 class="text-xl font-bold mb-2"><?= $konser['nama_acara']; ?></h3>
+            <p class="text-gray-700 mb-2">Tanggal: <?= date('d F Y', strtotime($konser['tanggal'])); ?></p>
+            <p class="text-gray-700">Lokasi: <?= $konser['lokasi']; ?></p>
+            <p class="text-gray-700">Deskripsi: <?= $konser['deskripsi']; ?></p>
+        </div>
         <?php
         }
         ?>
     </div>
 </div>
-
