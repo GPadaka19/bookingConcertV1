@@ -23,3 +23,8 @@ require_once 'layout/layout.php';
         </form>
     </div>
 </div>
+<?php
+if (isset($_SESSION['nama'])) {
+    header("location: login.php");
+}
+?>
