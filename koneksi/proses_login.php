@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "Password salah!";
     }
 } else {
-    echo "Email tidak ditemukan!";
+    echo "Username tidak ditemukan!";
 }
 
 // Menutup koneksi
