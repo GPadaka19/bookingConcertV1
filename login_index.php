@@ -19,6 +19,9 @@ $result = mysqli_query($conn, $query);
             <p class="text-gray-700 mb-2">Tanggal: <?= date('d F Y', strtotime($konser['tanggal'])); ?></p>
             <p class="text-gray-700">Lokasi: <?= $konser['lokasi']; ?></p>
             <p class="text-gray-700">Deskripsi: <?= $konser['deskripsi']; ?></p>
+        <a href="login_pesan.php?id_acara=<?= $konser['id_acara']; ?>" class="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Pesan Tiket
+        </a>
         </div>
         <?php
         }
