@@ -8,7 +8,8 @@ if (isset($_POST['pesan_tiket'])) {
     $metode_pembayaran = $_POST['metode_pembayaran'];
     $tanggal_pembayaran = date('Y-m-d');
 
-    $query = "INSERT INTO transaksi (id_pengguna, id_tiket, metode_pembayaran, tanggal_pembayaran) VALUES ('$id_pengguna', '$id_tiket', '$metode_pembayaran', '$tanggal_pembayaran')";
+    $query = "INSERT INTO transaksi (id_pengguna, id_tiket, metode_pembayaran, tanggal_pembayaran) 
+    VALUES ('$id_pengguna', '$id_tiket', '$metode_pembayaran', '$tanggal_pembayaran')";
     $result = mysqli_query($conn, $query);
 
     if ($result) {
