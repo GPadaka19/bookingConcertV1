@@ -26,9 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $metode_pembayaran = $_POST['metode_pembayaran'];
     $total_harga = $_POST['total_harga'];
     $tanggal_pembayaran = date('Y-m-d');
-    $id_acara = $_GET['id_acara']; // diambil dari url, seperti http://localhost/bookingconcertv1/login_pesan.php?id_acara=1
+    $id_acara = $_GET['id_acara'];
+    $jumlah_tiket = $_POST['jumlah_tiket'];
 
-    $queryTransaksi = "INSERT INTO transaksi (id_pengguna, id_tiket, metode_pembayaran, tanggal_pembayaran, total_harga, id_acara) VALUES ('$id_pengguna', '$id_tiket', '$metode_pembayaran', '$tanggal_pembayaran', '$total_harga', '$id_acara')";
+    $queryTransaksi = "INSERT INTO transaksi (id_pengguna, id_tiket, metode_pembayaran, tanggal_pembayaran, total_harga, id_acara, jumlah_tiket) VALUES ('$id_pengguna', '$id_tiket', '$metode_pembayaran', '$tanggal_pembayaran', '$total_harga', '$id_acara', '$jumlah_tiket')";
 
     if (mysqli_query($conn, $queryTransaksi)) {
         header("Location: tiket_saya.php");

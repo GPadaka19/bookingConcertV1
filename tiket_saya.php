@@ -28,6 +28,7 @@ $resultTransaksi = mysqli_query($conn, $queryTransaksi);
                     <h3 class="text-xl font-bold mb-2"><?= $acara['nama_acara']; ?></h3>
                     <p class="text-gray-700 mb-2">Nama Pemesan: <?= $pengguna['nama']; ?></p>
                     <p class="text-gray-700 mb-2">Tanggal Acara: <?= date('d F Y', strtotime($acara['tanggal'])); ?></p>
+                    <p class="text-gray-700 mb-2">Jumlah Tiket: <?= $transaksi['jumlah_tiket']; ?></p>
                     <p class="text-gray-700">Total Bayar: Rp <?= $transaksi['total_harga']; ?></p>
                 </div>
             </div>
