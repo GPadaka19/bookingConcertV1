@@ -13,7 +13,7 @@
 <body class="bg-gray-100">
 <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="home.php" class="text-white text-2xl font-bold">Pemesanan tiket</a>
+        <a href="home.php" class="text-white text-2xl font-bold">S E N A N D U N G T I K E T</a>
         <ul class="flex space-x-4">
             <li><a href="login.php" class="text-white">Login</a></li>
             <li><a href="daftar.php" class="text-white">Daftar</a></li>

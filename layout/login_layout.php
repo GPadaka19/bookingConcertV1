@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['nama'])) {
+if (isset($_SESSION['id_pengguna']) || isset($_SESSION['nama'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ if (isset($_SESSION['nama'])) {
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="bg-gray-100">
     <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
         <a href="login_index.php" class="text-white text-2xl font-bold">Pemesanan tiket</a>

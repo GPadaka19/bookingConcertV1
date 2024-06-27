@@ -1,27 +1,36 @@
 <?php
 require_once 'koneksi.php';
 
+// Mulai sesi
+session_start();
+
 // Menangkap data dari form login
 $nama = $_POST['nama'];
 $password = $_POST['password'];
 
-// Query untuk memilih data pengguna berdasarkan email
-$query = "SELECT * FROM pengguna WHERE nama = '$nama'";
-
-// Menjalankan query
-$result = mysqli_query($conn, $query);
+// Gunakan prepared statements untuk keamanan
+$query = $conn->prepare("SELECT * FROM pengguna WHERE nama = ?");
+$query->bind_param("s", $nama);
+$query->execute();
+$result = $query->get_result();
 
 // Cek apakah data ditemukan
-if (mysqli_num_rows($result) > 0) {
+if ($result->num_rows > 0) {
     // Ambil data pengguna
-    $user = mysqli_fetch_assoc($result);
+    $user = $result->fetch_assoc();
+    
     // Cek password
     if (password_verify($password, $user['password'])) {
         // Jika password benar, maka login berhasil
         echo "Login berhasil!";
-    session_start();
-    $_SESSION['nama'] = $nama;
-    header("location: ../login_index.php");
+        
+        // Set session
+        $_SESSION['nama'] = $nama;
+        $_SESSION['id_pengguna'] = $user['id_pengguna'];
+        
+        // Redirect ke halaman lain
+        header("Location: ../login_index.php");
+        exit(); // Pastikan untuk menghentikan eksekusi setelah redirect
     } else {
         echo "Password salah!";
     }
@@ -30,4 +39,5 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 // Menutup koneksi
-mysqli_close($conn);
+$conn->close();
+?>
