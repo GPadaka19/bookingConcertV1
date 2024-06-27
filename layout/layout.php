@@ -11,9 +11,9 @@
     <title>Daftar Akun</title>
 </head>
 <body class="bg-gray-100">
-<nav class="bg-gray-800 p-4">
+<nav class="bg-gray-800 p-5">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="home.php" class="text-white text-2xl font-bold">S E N A N D U N G T I K E T</a>
+        <a href="home.php" class="text-white text-2xl font-bold">Pemesanan Tiket</a>
         <ul class="flex space-x-4">
             <li><a href="login.php" class="text-white">Login</a></li>
             <li><a href="daftar.php" class="text-white">Daftar</a></li>

@@ -15,7 +15,7 @@ $query = "INSERT INTO pengguna (nama, email, password) VALUES ('$nama', '$email'
 // Menjalankan query
 if (mysqli_query($conn, $query)) {
     echo "Pendaftaran berhasil!";
-    header("location: ../home.php");
+    header("location: ../login.php");
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conn);
 }
